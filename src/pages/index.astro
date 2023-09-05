@@ -1,0 +1,75 @@
+---
+import { Image } from "astro:assets"
+import ImageMe from "../assets/image-1.jpg"
+import ImageMeAgain from "../assets/me.jpeg"
+---
+
+<div
+  class="bg-pink-700 text-pink-50 w-screen min-h-screen flex flex-col items-center py-10 gap-y-4"
+>
+  <h1 class="text-5xl">I'm Jeffrey!</h1>
+  <h3>I'm a cool dude!</h3>
+  <div class="flex max-w-xl">
+    <Image class="w-20 h-56 rounded" src={ImageMe} alt="Jeffrey" />
+    <div>
+      <Image class="w-56 h-20 rounded" src={ImageMe} alt="Jeffrey" />
+      <Image class="w-56 h-52" src={ImageMeAgain} alt="Jeffrey" />
+    </div>
+    <Image class="w-72 h-72 rounded" src={ImageMe} alt="Jeffrey" />
+  </div>
+  <div class="flex flex-col items-center">
+    <h3 class="text-xl">Reach out to me :D</h3>
+    <a class="underline" href="https://www.linkedin.com/in/zwjc/">LinkedIn</a>
+  </div>
+  <div class="grid grid-cols-2 gap-y-5 max-w-xl">
+    <h3 class="text-center text-xl col-span-2">
+      A bit about me (100% self authored)
+    </h3>
+    <p class="text-sm">
+      Well, howdy there, folks! I'm your friendly neighborhood Jeffrey Chang,
+      the not-so-secret IT whiz at KTH, just trying to navigate the wild and
+      wacky world of technology while busting a move or two.
+    </p>
+    <div></div>
+    <div></div>
+    <p class="text-xs">
+      So, picture this: a 21-year-old dude with a laptop in one hand and a disco
+      ball in the other. Yep, that's me! When I'm not busy deciphering the
+      mysteries of coding, I'm out there spreading the joy of dance like it's my
+      superpower. They say I've got moves that can rival a cat on a hot tin
+      roof, and I'm always up for a dance-off. Trust me, I've got more groove
+      than a jukebox at a '70s roller disco.
+    </p>
+    <p class="text-xs">
+      But back to the IT stuff. It's like trying to juggle flaming chainsaws
+      while riding a unicycle through a minefield. You've got bugs to squash,
+      firewalls to breach, and passwords that are more complicated than
+      deciphering ancient hieroglyphs. But hey, that's what makes it fun, right?
+      I'll code my way through anything, even if it means writing a program to
+      order pizza faster than the speed of light.
+    </p>
+    <div></div>
+    <div></div>
+    <p>
+      Now, when it comes to keeping my cool, well, let's just say I'm cooler
+      than a cucumber in Antarctica. When deadlines are looming, and errors are
+      multiplying like rabbits, I'm the guy who stays calm, cool, and collected,
+      just like a Zen master in a snowstorm.
+    </p>
+    <p class="text-lg">
+      And when I'm not glued to my computer or lighting up the dance floor, you
+      can find me with my head in the clouds, dreaming up the next big thing in
+      tech. Who knows, maybe I'll invent a gadget that combines coding with
+      dance moves. The world isn't ready for that level of awesome, but I'm
+      working on it.
+    </p>
+    <div></div>
+    <div></div>
+    <p class="text-xs">
+      So there you have it, a day in the life of Jeffrey Chang, where IT meets
+      dance-offs, and tech meets a tornado of comical chaos. Stay tuned, folks,
+      because this IT-cum-dance sensation is just getting started on this crazy
+      rollercoaster ride!
+    </p>
+  </div>
+</div>
