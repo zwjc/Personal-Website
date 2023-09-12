@@ -1,66 +1,61 @@
----
-import { Image } from "astro:assets"
-import ImageMe from "../assets/image-1.jpg"
-import ImageMeAgain from "../assets/me.jpeg"
----
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Jeffrey Chang</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c24dc808e.js" crossorigin="anonymous"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
-      </style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+        }
+    </style>
 </head>
 
-<div
-  class="bg-zinc-200 text-stone-700 w-screen min-h-screen flex flex-col items-center py-10 gap-y-4"
->
-  <h1 class="text-5xl">Jeffrey Chang</h1>
-  <h3>Welcome to the coolest website of all time!</h3>
-  <div class="flex max-w-xl">
-    <Image class="w-72 h-72 rounded" src={ImageMe} alt="Cat" />
-    <div>
-      <Image class="w-72 h-72 rounded" src={ImageMeAgain} alt="Jeffrey" />
+<body class="bg-zinc-200 text-stone-700 min-h-screen flex flex-col items-center py-10 gap-y-4">
+    <h1 class="text-5xl">Jeffrey Chang</h1>
+    <h3>Welcome to the coolest website of all time!</h3>
+    <div class="flex max-w-xl">
+        <img class="w-72 h-72 rounded" src="ImageMe.jpg" alt="Cat" />
+        <div>
+            <img class="w-72 h-72 rounded" src="ImageMeAgain.jpeg" alt="Jeffrey" />
+        </div>
+        <img class="w-72 h-72 rounded" src="ImageMe.jpg" alt="Jeffrey" />
     </div>
-    <Image class="w-72 h-72 rounded" src={ImageMe} alt="Jeffrey" />
-  </div>
-  <div class="grid grid-cols-2 gap-y-5 max-w-xl">
-    <h3 class="text-center text-xl col-span-2">
-      A bit about me
-    </h3>
-    <p class="text-sm">
-      I'm currently studying my fourth year in Information Technology at KTH Royal Institute of Technology. 
-      It's the Swedish 5-year program, Civilingenjör, which is equivalent to a bachelors and masters degree!
-    </p>
-    <div></div>
-    <div></div>
-    <p class="text-xs">
-      Apart from studying, I like to spend time at the student union, THS (Tekniska Högskolans Studentkår)
-       through the Union Board, THS Nomination Committee, THS Armada and THS International Reception.
-    </p>
-    <p class="text-xs">
-      But back to the IT stuff. Some of the relevant courses I have taken are: 
-      Algorithms and Data Structures, Computer Hardware Engineering, Programming I & II, 
-      Logic for Computer Scientists, Intro to Computer Security, Networks and Communications, 
-      Project in ICT, Modern Software Development, Human Computer-Interaction, 
-      Operating Systems and way too many maths courses.
-    </p>
-    <div></div>
-    <div></div>
-    <p>
-      Now, if you are interested in what you have read so far, 
-      I have a fantastic LinkedIn and Email for you to contact me from! 
-      With more details about me and what I do in the LinkedIn.
-    </p>
-      <div class="flex flex-col items-center">
-    <h3 class="text-xl">Reach out to me at</h3>
-    <a class="underline" href="https://www.linkedin.com/in/zwjc/">LinkedIn</a>
-    <a class="underline" href="mailto:zw.jchang@gmail.com">Email</a>
+    <div class="grid grid-cols-2 gap-y-5 max-w-xl">
+        <h3 class="text-center text-xl col-span-2">
+            A bit about me
+        </h3>
+        <p class="text-sm">
+            I'm currently studying my fourth year in Information Technology at KTH Royal Institute of Technology.
+            It's the Swedish 5-year program, Civilingenjör, which is equivalent to a bachelors and masters degree!
+        </p>
+        <p class="text-xs">
+            Apart from studying, I like to spend time at the student union, THS (Tekniska Högskolans Studentkår)
+            through the Union Board, THS Nomination Committee, THS Armada and THS International Reception.
+        </p>
+        <p class="text-xs">
+            But back to the IT stuff. Some of the relevant courses I have taken are:
+            Algorithms and Data Structures, Computer Hardware Engineering, Programming I & II,
+            Logic for Computer Scientists, Intro to Computer Security, Networks and Communications,
+            Project in ICT, Modern Software Development, Human-Computer Interaction,
+            Operating Systems and way too many maths courses.
+        </p>
+        <p>
+            Now, if you are interested in what you have read so far,
+            I have a fantastic LinkedIn and Email for you to contact me from!
+            With more details about me and what I do in the LinkedIn.
+        </p>
+        <div class="flex flex-col items-center">
+            <h3 class="text-xl">Reach out to me at</h3>
+            <a class="underline" href="https://www.linkedin.com/in/zwjc/">LinkedIn</a>
+            <a class="underline" href="mailto:zw.jchang@gmail.com">Email</a>
+        </div>
+    </div>
+</body>
 
-  </div>
-  </div>
-</div>
+</html>
