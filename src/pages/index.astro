@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 
+---
+import { Image } from "astro:assets"
+import ImageMe from "../assets/image-1.jpg"
+import ImageMeAgain from "../assets/me.jpeg"
+---
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,11 +47,11 @@
     <h1 class="text-5xl">Jeffrey Chang</h1>
     <h3>Welcome to the coolest website of all time!</h3>
     <div class="flex max-w-xl">
-        <img class="w-72 h-72 rounded" src=".../image-1.jpg" alt="Wow" />
+        <Image class="w-20 h-56 rounded" src={ImageMe} alt="Jeffrey" />
         <div>
-            <img class="w-72 h-72 rounded" src=".../me.jpeg" alt="Jeffrey" />
+            <Image class="w-72 h-72 rounded" src={ImageMe} alt="Jeffrey" />
         </div>
-        <img class="w-72 h-72 rounded" src=".../me.jpeg" alt="Jeffrey" />
+        <Image class="w-72 h-72 rounded" src={ImageMe} alt="Jeffrey" />
     </div>
     <div class="grid grid-cols-2 gap-y-5 max-w-xl">
         <h3 class="text-center text-xl col-span-2">
