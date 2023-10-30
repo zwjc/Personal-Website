@@ -1,4 +1,4 @@
-# Jeffrey's little site
+# Jeffrey's big site
 
 ## 🧞 Commands
 
