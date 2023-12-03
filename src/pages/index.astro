@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
+---
+import { Image } from "astro:assets"
+import Image1 from "../assets/image1.jpg"
+import Image2 from "../assets/image2.jpeg"
+import Image3 from "../assets/image3.jpg"
+---
+
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -41,8 +49,8 @@
     <h1 class="text-5xl">Jeffrey Chang</h1>
     <h3>Welcome to one of the websites of all time!</h3>
     <div class="flex max-w-xl">
-        <img class="w-80 h-80 rounded" src="../assets/image1.jpg" alt="Cool Jeffrey" />
-        <img class="w-80 h-80 rounded" src="../assets/image3.jpg" alt="Formal Jeffrey" />
+        <img class="w-80 h-80 rounded" src={Image1} alt="Cool Jeffrey" />
+        <img class="w-80 h-80 rounded" src={Image3} alt="Formal Jeffrey" />
     </div>
     <div class="grid grid-cols-2 gap-y-5 max-w-xl">
         <h3 class="text-center text-xl col-span-2">
