@@ -2,9 +2,9 @@
 <html lang="en">
 
 ---
-import { Image } from "astro:assets"
-import ImageMe from "../assets/image-1.jpg"
-import ImageMeAgain from "../assets/me.jpeg"
+import Image1 from '../assets/image1.jpg';
+import Image2 from '../assets/image2.jpeg';
+import Image3 from '../assets/image3.jpg';
 ---
 
 <head>
@@ -47,11 +47,11 @@ import ImageMeAgain from "../assets/me.jpeg"
     <h1 class="text-5xl">Jeffrey Chang</h1>
     <h3>Welcome to the coolest website of all time!</h3>
     <div class="flex max-w-xl">
-        <Image class="w-20 h-56 rounded" src={ImageMe} alt="Jeffrey" />
+        <img class="w-20 h-56 rounded" src={Image1} alt="Jeffrey" />
         <div>
-            <Image class="w-72 h-72 rounded" src={ImageMe} alt="Jeffrey" />
+            <img class="w-72 h-72 rounded" src={Image2} alt="Another View" />
         </div>
-        <Image class="w-72 h-72 rounded" src={ImageMe} alt="Jeffrey" />
+        <img class="w-72 h-72 rounded" src={Image3} alt="Different Angle" />
     </div>
     <div class="grid grid-cols-2 gap-y-5 max-w-xl">
         <h3 class="text-center text-xl col-span-2">
