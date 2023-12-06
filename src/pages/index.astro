@@ -13,6 +13,18 @@
     <style>
         body {
             font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            height: 100%;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
         }
 
         .bottom-text {
@@ -22,12 +34,21 @@
             margin-top: 20px;
         }
 
-        .text-tl, .text-tr, .text-bl, .text-br {
+        #text-t {
             max-width: 300px;
             overflow: hidden;
             text-overflow: ellipsis;
             border-radius: 2px;
             border-color: bisque;
+        }
+
+        #text-bottom {
+            max-width: 300px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            border-radius: 2px;
+            border-color: bisque;
+            margin-bottom: 2%;
         }
 
         .bottom-text > a {
@@ -72,6 +93,29 @@
             line-height: 1.5;
         }
 
+        #contact{
+            background-color: #d1d5db;
+            margin-top: auto;
+            padding-bottom: 1%;
+            margin-bottom: 0%;
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        .my-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            max-width: 650px;
+            margin: 0 auto;
+            padding-top: 3%;
+        }
 
     </style>
 
@@ -85,45 +129,39 @@
     </h3>
     <a href="/cv" class="cv-button">View My CV</a>
 
-    <div class="flex max-w-xl">
-        <img class="w-80 h-80 rounded" src="../assets/image1.jpg" alt="Cool Jeffrey" />
-        <img class="w-80 h-80 rounded" src="../assets/image1.jpg" alt="Formal Jeffrey" />
-    </div>
-    <div class="grid grid-cols-2 gap-y-5 max-w-xl">
-        <h3>
-            A bit about me
-        </h3>
-        <div class="text-tl">
-            I'm currently studying my fourth year in Information Technology at KTH Royal Institute of Technology.
-            It's the Swedish 5-year program called "Civilingenjör", 
-            which is the international equivalent to a bachelors and masters degree!
-        </div>
-        <div class="text-bl">
-            I have an interest in both project management and frontend development.
-            Apart from studying, I like to spend time at the student union at KTH, THS
-            through the THS Union Board, THS Armada, THS International Reception and much more!
-        </div>
-        <div class="text-bl">
-            But back to the IT stuff. I have taken a lot of backend programming courses, but also some frontend courses.
-            I have also taken way too many maths courses :D
-        </div>
-        <div class="text-br">
-            Now, if you are interested in what you have read so far,
-            I have a fantastic LinkedIn and Email for you to contact me from!
-            With more details about me and what I do in the LinkedIn.
+    <div class="centered-containers">
+        <div class="my-grid">
+            <div>
+                I'm currently studying my fourth year in Information Technology at KTH Royal Institute of Technology.
+                It's the Swedish 5-year program called "Civilingenjör", 
+                which is the equivalent to a bachelors and masters degree!
+            </div>
+            <div>
+                I have an interest in both project management and frontend development.
+                Apart from studying, I like to spend time at the student union at KTH, THS
+                through the THS Union Board, THS Armada, THS International Reception and much more!
+            </div>
+            <div>
+                But back to the IT stuff. I have taken a lot of backend programming courses, but also some frontend courses.
+                I have also taken way too many maths courses :D
+            </div>
+            <div>
+                Now, if you are interested in what you have read so far,
+                I have a fantastic LinkedIn and Email for you to contact me from!
+                With more details about me and what I do in the LinkedIn.
+            </div>
         </div>
     </div>
 
-
-        <div class="text-center">
+        <div class="text-center" id="contact">
             <h2>
                 Reach out to me at
             </h2>
-            <i class="fa-brands fa-linkedin-in fa-bounce" style="color: #0042aa;"></i>
-            <a class="underline" href="https://www.linkedin.com/in/zwjc"> LinkedIn</a>
+            <i class="fa-brands fa-linkedin-in fa-bounce" style="color: #0042aa; margin-right: 5px;"></i>
+            <a class="underline" href="https://www.linkedin.com/in/zwjc">LinkedIn</a>
         <br>
-        <i class="fa-regular fa-at fa-bounce" style="color: #000000;"></i>
-        <a class="underline" href="mailto:zw.jchang@gmail.com"> Email</a>
+        <i class="fa-regular fa-at fa-bounce" style="color: #000000; margin-right: 5px;"></i>
+        <a class="underline" href="mailto:zw.jchang@gmail.com">Email</a>
         </div>
 
     </body>
