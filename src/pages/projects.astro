@@ -11,11 +11,13 @@
     body {
         text-align: center;
         font-family: 'Quicksand', sans-serif;
+        background-color: #ebebeb;
     }
     
     h1 {
         margin-top: 2%;
         font-weight: bold;
+        font-size: xx-large;
     }
 
     h2 {
@@ -68,30 +70,31 @@
         transform: scale(0.95);
     }
       
-      .projects-container {
+    .projects-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Creates a responsive number of columns */
+        grid-template-columns: repeat(2, 1fr);
         gap: 20px;
         padding: 20px;
-        margin: 0 auto; /* Centers the grid horizontally */
-      }
+        margin: auto;
+        max-width: 1000px;
+    }
 
-      .project-card {
-        background: #fff;
+    .project-card {
+        background: #eed5fd;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
         border-radius: 8px;
         overflow: hidden;
         transition: transform 0.3s ease;
-      }
+    }
 
       .project-card:hover {
         transform: translateY(-5px);
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 10px #b330ff;
       }
 
       .project-image {
         width: 100%;
-        height: 150px; /* Adjust height to fit smaller card size */
+        height: 150px;
         object-fit: cover;
       }
 
@@ -102,15 +105,14 @@
       .project-title {
         margin: 0;
         color: #333;
-        font-size: 1.2em; /* Smaller font size for smaller card */
+        font-size: 1.2em;
       }
 
       .project-description {
         color: #666;
-        font-size: 0.9em; /* Smaller font size for smaller card */
+        font-size: 0.9em;
       }
 
-      /* ... [other styles if necessary] ... */
     </style>
   </head>
   <body>
@@ -119,36 +121,35 @@
     </header>
 
     <div class="projects-container">
-      <!-- Project Cards -->
-        <a href="link-to-project-1" class="project-card">
-        <img src="image-source-1.jpg" alt="Project 1" class="project-image">
+        <a href="https://noahpe0.wixsite.com/klantboll/game" class="project-card">
+        <img src="image1.jpg" alt="Project 1" class="project-image">
         <div class="project-info">
             <h3 class="project-title">Project 1</h3>
-            <p class="project-description">Short description of Project 1...</p>
+            <p class="project-description">Project description</p>
+        </div>
+        </a>
+
+        <a href="https://pokeme-dh2642.web.app" class="project-card">
+        <img src="image-source-1.jpg" alt="Project 2" class="project-image">
+        <div class="project-info">
+            <h3 class="project-title">Project 2</h3>
+            <p class="project-description">Project description</p>
         </div>
         </a>
 
         <a href="link-to-project-1" class="project-card">
-        <img src="image-source-1.jpg" alt="Project 1" class="project-image">
+        <img src="image-source-1.jpg" alt="Project 3" class="project-image">
         <div class="project-info">
-            <h3 class="project-title">Project 1</h3>
-            <p class="project-description">Short description of Project 1...</p>
+            <h3 class="project-title">Project 3</h3>
+            <p class="project-description">Project description</p>
         </div>
         </a>
 
         <a href="link-to-project-1" class="project-card">
-        <img src="image-source-1.jpg" alt="Project 1" class="project-image">
+        <img src="image-source-1.jpg" alt="Project 4" class="project-image">
         <div class="project-info">
-            <h3 class="project-title">Project 1</h3>
-            <p class="project-description">Short description of Project 1...</p>
-        </div>
-        </a>
-
-        <a href="link-to-project-1" class="project-card">
-        <img src="image-source-1.jpg" alt="Project 1" class="project-image">
-        <div class="project-info">
-            <h3 class="project-title">Project 1</h3>
-            <p class="project-description">Short description of Project 1...</p>
+            <h3 class="project-title">Project 4</h3>
+            <p class="project-description">Project description</p>
         </div>
         </a>
     </div>
