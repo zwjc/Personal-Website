@@ -14,11 +14,18 @@
         body {
             font-family: 'Quicksand', sans-serif;
             margin: 0;
-            padding: 0;
+            padding: 10px;
             display: flex;
             flex-direction: column;
             min-height: 100vh;
             height: 100%;
+        }
+
+        @media (max-width: 768px) {
+            .centered-container, .my-grid {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
         }
 
         html {
