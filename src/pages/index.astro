@@ -1,12 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import { Image } from 'astro:assets';
+import meImage from '../assets/image1.jpg';
+---
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jeffrey Chang</title>
-    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/5c24dc808e.js" crossorigin="anonymous"></script>
     
@@ -208,7 +209,7 @@
     <a href="/cv" class="button">View My CV</a>  
 
     <div class="image-container">
-        <img src="src/assets/image1.jpg" alt="CoolMe" class="rounded-image">
+        <Image src={meImage} alt={"An image of meeee"} height={200}/>
         <div class="text-container">
              <p class="main-text">Hello! I am a student studying Information and Communication Technology with an interest in project management. 
              Welcome to my website :D You can find my CV, past projects and contact information here!</p>
@@ -260,4 +261,3 @@
         </div>
 
     </body>
-</html>
