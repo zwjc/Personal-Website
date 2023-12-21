@@ -1,3 +1,11 @@
+---
+import { Image } from 'astro:assets';
+import project1 from '../assets/project1.png';
+import project2 from '../assets/project2.png';
+import project4 from '../assets/project4.png';
+import kth from '../assets/kth.jpeg';
+---
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -161,7 +169,7 @@
 
     <div class="projects-container">
         <a href="https://noahpe0.wixsite.com/klantboll/game" target="_blank" class="project-card">
-        <img src="src/assets/project1.png" alt="Project 1" class="project-image1">
+        <Image src={project1} alt="Project 1" height={280}/>
         <div class="project-info">
             <h3 class="project-title">Unity3D Game Development</h3>
             <p class="project-description">
