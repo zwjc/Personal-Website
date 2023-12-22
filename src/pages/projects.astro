@@ -68,7 +68,8 @@ import kth from '../assets/kth.jpeg';
         text-align: center;
         border-radius: 100px;
         text-decoration: salmon;
-        transition: background-color 0.3s ease, transfor 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transition: all; transition-duration: 350ms;
         margin-bottom: 2%;
         margin-right: 1%;
     }
@@ -160,6 +161,16 @@ import kth from '../assets/kth.jpeg';
         font-size: 0.9em;
       }
 
+    .fade-out {
+        animation: fadeOut 350ms ease;
+        opacity: 0;
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
+    }
+
     </style>
   </head>
   <body>
@@ -215,5 +226,22 @@ import kth from '../assets/kth.jpeg';
       <a href="/" class="button">Back to Start</a>
       <a href="/cv" class="button">See my CV</a>
     </footer>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const transitionLinks = document.querySelectorAll('a.button');
+
+                transitionLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.body.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            window.location.href = this.getAttribute('href');
+                        }, 350);
+                    });
+                });
+            });
+        </script>
   </body>
 </html>

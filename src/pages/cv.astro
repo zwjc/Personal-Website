@@ -58,7 +58,9 @@
         text-align: center;
         border-radius: 100px;
         text-decoration: salmon;
-        transition: background-color 0.3s ease, transfor 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transition: all; transition-duration: 350ms;
+
         margin-bottom: 2%;
     }
 
@@ -75,7 +77,9 @@
         text-align: center;
         border-radius: 100px;
         text-decoration: salmon;
-        transition: background-color 0.3s ease, transfor 0.3s ease;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        transition: all; transition-duration: 350ms;
+
         margin-bottom: 2%;
     }
 
@@ -94,6 +98,16 @@
 
     .experience {
         font-weight: medium;
+    }
+
+    .fade-out {
+        animation: fadeOut 350ms ease;
+        opacity: 0;
+    }
+
+    @keyframes fadeOut {
+        from { opacity: 1; }
+        to { opacity: 0; }
     }
 
 </style>
@@ -168,7 +182,23 @@
         <a href="/projects" class="pr-button">See Projects</a>
     </ul>
     </section>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const transitionLinks = document.querySelectorAll('a.button, a.pr-button');
 
+                transitionLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        document.body.classList.add('fade-out');
+
+                        setTimeout(() => {
+                            window.location.href = this.getAttribute('href');
+                        }, 350);
+                    });
+                });
+            });
+        </script>
   </body>
       <a href="/" class="button">Back</a>
+
 </html>
