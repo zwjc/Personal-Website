@@ -228,19 +228,27 @@ import kth from '../assets/kth.jpeg';
     </footer>
 
         <script>
-            document.addEventListener('DOMContentLoaded', () => {
+            function attachTransitionLinks() {
                 const transitionLinks = document.querySelectorAll('a.button');
-
                 transitionLinks.forEach(link => {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        document.body.classList.add('fade-out');
-
-                        setTimeout(() => {
-                            window.location.href = this.getAttribute('href');
-                        }, 350);
-                    });
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                    window.location.href = this.getAttribute('href');
+                    }, 350);
                 });
+                });
+            }
+
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.remove('fade-out');
+                attachTransitionLinks();
+            });
+
+            window.addEventListener('pageshow', (event) => {
+                document.body.classList.remove('fade-out');
+                attachTransitionLinks();
             });
         </script>
   </body>
